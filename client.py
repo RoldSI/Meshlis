@@ -7,12 +7,12 @@ import pyaudio
 # Audio parameters
 FORMAT = pyaudio.paInt16
 CHANNELS = 1
-RATE = 44100
-CHUNK = 1024
+RATE = 4096
+CHUNK = 4096
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 global stream
 # Network parameters
-HOST = 'server_ip_address'  # Replace with your server IP address
+HOST = '192.168.9.191'  # Replace with your server IP address
 PORT = 5000
 audio = pyaudio.PyAudio()  # init pyaudio
 
