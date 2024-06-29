@@ -1,0 +1,16 @@
+[package]
+name = "server"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+anyhow = "1.0.86"
+eframe = "0.27.2"
+egui_plot = "0.27.2"
+messaging = { version = "0.1.0", path = "../messaging" }
+plotters = "0.3.6"
+postcard = { version = "1.0.8", features = ["alloc"] }
+ringbuffer = "0.15.0"
+tokio = { version = "1.38.0", features = ["full"] }
+
+

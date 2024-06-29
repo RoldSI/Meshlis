@@ -1,0 +1,15 @@
+[package]
+name = "client"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+anyhow = "1.0.86"
+messaging = { version = "0.1.0", path = "../messaging" }
+postcard = { version = "1.0.8", features = ["alloc"] }
+tokio = { version = "1.38.0", features = ["full"] }
+
+cpal = "0.15.3"
+clap = { version = "4.5.8", features = ["derive"] }
+
+
