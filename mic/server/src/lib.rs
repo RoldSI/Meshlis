@@ -191,7 +191,9 @@ impl Context {
         let mut v = self.pos_fn.lock().unwrap();
         if let Some(v) = &mut *v {
             println!("calling");
-            self.store_pos(v(self.data()));
+            self.store_pos(v(self.data().iter().map(|v| {
+                v.real_fft().to_vec().into_iter().map(|v| v.re).skip(1400).take(1550).collect()
+            }).collect()));
         }
     }
 }
