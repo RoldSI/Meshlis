@@ -1,7 +1,8 @@
 
 [workspace]
 resolver = "2"
-members = ["client", "server", "messaging"]
+members = ["client", "server", "messaging", "pyserver"]
+default-members = ["client", "server"]
 
 [workspace.package]
 version = "0.1.0"
