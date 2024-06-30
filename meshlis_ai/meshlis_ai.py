@@ -72,3 +72,6 @@ with torch.no_grad():
     test_outputs = model(X_test_tensor)
     test_loss = criterion(test_outputs, y_test_tensor)
 print(f'Test Loss: {test_loss.item():.4f}')
+
+# Save the model
+torch.save(model.state_dict(), 'sound_source_model.pth')
